@@ -12,19 +12,37 @@ Here are some helpful links:
     String.split()
 ******************************************************/
 
+/*************************
+Basically want to find any word beginning with a vowel and add "way" to it
+If it doesn't we are going to go until we hit a vowel, move the first letter (or chunk of letters) to the end and add "ay" to the end.
+*************************/
 function translatePigLatin(str) {
-  var vowel = ['a', 'e', 'i', 'o', 'u'];
-  var way = "way";
-  var ay = "ay";
+  //split up the word into an array of characters
+  var lrs = str.split("");
+  //RegEx to find a,e,i,o,u (assign to variable)
+  var re = /[aeiou]/;
   
-  //Iterate through the vowel array
-  for(var i in vowel) {
-    //if the current index of the vowel array equals the first character of str
-    if(vowel[i] == str.charAt(0)) {
-      //return str plus "way"
-      return str + way;
-    }//end if
-  }//end for
-}//end translatePigLatin
+  //if statement to check if the first letter matches aeiou
+  //re.test letters array at starting point
+  if(re.test(lrs[0])){
+    //if it does join it with the string "way"
+    return lrs.join("") + "way";
+  }//end if
+  
+    while(true) {
+    //for cases not matching vowels
+    //if regex doesn't contain a vowel at first char
+    if(!re.test(lrs[0])) {
+    //push it to the end and splice the first letter
+      lrs.push(lrs.splice(0,1));
+    }else {
+      break;
+    }//end  if else    
+  }//end while
+  //join array with "ay"
+  str = lrs.join("") + "ay";
+
+  return str;
+}
 
 translatePigLatin("consonant");
