@@ -14,8 +14,7 @@ function pairElement(str) {
   //Split str into an array of letters
   str = str.split("");
   
-  //Iterate through str and perform various mutations on each value
-  for(var i = 0; i < str.length; i++) {
+
     //Iterate through str and perform various mutations on each value
   for(var i = 0; i < str.length; i++) {
     switch(str[i]){
@@ -35,8 +34,7 @@ function pairElement(str) {
         break;
     }//end switch
   }//end for
-  }//end for
-  
+
   return str;
 }
 
