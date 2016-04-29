@@ -16,15 +16,25 @@ function pairElement(str) {
   
   //Iterate through str and perform various mutations on each value
   for(var i = 0; i < str.length; i++) {
-    if(str[i] == "G") {
-      str[i] = "GC";
-    }else if(str[i] == "C") {
-      str[i] = "CG";
-    }else if(str[i] == "A") {
-      str[i] = "AT";
-    }else if(str[i] == "T") {
-      str[i] = "TA";
-    }//end if
+    //Iterate through str and perform various mutations on each value
+  for(var i = 0; i < str.length; i++) {
+    switch(str[i]){
+      case "G":
+        str[i] = "GC";
+        break;
+      case "C":
+        str[i] = "CG";
+        break;
+      case "A":
+        str[i] = "AT";
+        break;
+      case "T": 
+        str[i] = "TA";
+        break;
+      default:
+        break;
+    }//end switch
+  }//end for
   }//end for
   
   return str;
