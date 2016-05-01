@@ -14,10 +14,9 @@ function pairElement(str) {
   //Split str into an array of letters
   str = str.split("");
   
-
-    //Iterate through str and perform various mutations on each value
+  //Iterate through str and perform various mutations on each value
   for(var i = 0; i < str.length; i++) {
-    switch(str[i]){
+   switch(str[i]){
       case "G":
         str[i] = "GC";
         break;
@@ -33,8 +32,10 @@ function pairElement(str) {
       default:
         break;
     }//end switch
+    //split each index at the space
+    str[i] = str[i].split("");
   }//end for
-
+  
   return str;
 }
 
