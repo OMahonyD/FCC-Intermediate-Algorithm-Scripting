@@ -23,8 +23,7 @@ function fearNotLetter(str) {
    }//end for loop
   
   
-    //Test console.log to test if the index is one value larger than the previous
-    console.log(holderArray[8] == holderArray[7] + 1);
+
   
   //Iterate (?) through the charCodes
     
