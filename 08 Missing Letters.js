@@ -22,13 +22,14 @@ function fearNotLetter(str) {
     holderArray.push(str.charCodeAt(i));
    }//end for loop
   
-  
-
-  
   //Iterate (?) through the charCodes
-    
-      //Each charCode (starting at index 1?) should be 1 greater than the previous
-      //If encounter a gap, return the missing charCode
+  //Each charCode (starting at index 1) should be 1 greater than the previous
+      for(var j = 1; j < holderArray.length; j++) {
+        //If encounter a gap, return the missing charCode
+        if(holderArray[j] != holderArray[j-1] + 1) {
+          console.log(holderArray[j] - 1);
+        }//end if
+      }//end for
 
       //Turn the charCode into its respective letter
       //Return the missing letter
