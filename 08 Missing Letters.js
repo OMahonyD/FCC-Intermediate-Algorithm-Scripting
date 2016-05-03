@@ -27,16 +27,12 @@ function fearNotLetter(str) {
       for(var j = 1; j < holderArray.length; j++) {
         //If encounter a gap, return the missing charCode
         if(holderArray[j] != holderArray[j-1] + 1) {
-          console.log(holderArray[j] - 1);
+          return String.fromCharCode(holderArray[j] - 1);
         }//end if
       }//end for
 
-      //Turn the charCode into its respective letter
-      //Return the missing letter
-      //if there is nothing missing return undefined
       
 
-  return holderArray;
 }
 
 fearNotLetter("abcdefghjklmno");
