@@ -22,9 +22,14 @@ function sumPrimes(num) {
   
   //Attempt Sieve of Erathosthenes Algorithm
   //Iterate through all numbers in holderArray
+  for(var j = 0; j < holderArray.length; j+=2){
+    holderArray.splice(holderArray[j], 1);
+  }
+  
   
   console.log(holderArray);
-  return num;
+  return holderArray;
+}
 }
 
 sumPrimes(10);
