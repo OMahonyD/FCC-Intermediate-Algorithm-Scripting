@@ -22,9 +22,12 @@ function sumPrimes(num) {
   
   //Attempt Sieve of Erathosthenes Algorithm
  
- //First number in holderArray is 2
+  //First number in holderArray is 2
     //Cross out every 2nd number in the list after it by counting in increments of 2
-    //(These will be all the multiples of 2 in the list)
+      //(These will be all the multiples of 2 in the list)
+  for(var j = 2; j < holderArray.length; j++) {
+    holderArray.splice(j, 1);
+  }
   
   //Next number in holderArray after 2 is 3
     //Cross out every 3rd number in the list after it by counting in increments of 3
