@@ -21,10 +21,18 @@ function sumPrimes(num) {
   }
   
   //Attempt Sieve of Erathosthenes Algorithm
-  //Iterate through all numbers in holderArray
-  for(var j = 0; j < holderArray.length; j+=2){
-    holderArray.splice(holderArray[j], 1);
-  }
+ 
+ //First number in holderArray is 2
+    //Cross out every 2nd number in the list after it by counting in increments of 2
+    //(These will be all the multiples of 2 in the list)
+  
+  //Next number in holderArray after 2 is 3
+    //Cross out every 3rd number in the list after it by counting in increments of 3
+    //(These will be all the multiples of 3 in the list)
+  
+  //Next number in holderArray not yet crossed out after 3 is 5
+    //Cross out every 5th number in the list after it by counting in increments of 5
+    //(These will be all the multiples of 5 in the list)
   
   
   console.log(holderArray);
