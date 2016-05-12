@@ -26,7 +26,9 @@ function sumPrimes(num) {
     //Cross out every 2nd number in the list after it by counting in increments of 2
       //(These will be all the multiples of 2 in the list)
   for(var j = 2; j < holderArray.length; j++) {
-    holderArray.splice(j, 1);
+    if(holderArray[j] % 2 === 0) {
+        holderArray.splice(j, 1);      
+    }
   }
   
   //Next number in holderArray after 2 is 3
