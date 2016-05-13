@@ -28,7 +28,10 @@ function smallestCommons(arr) {
   //test line to see if the first part worked
   console.log("Minimum is " + min + " and Maximum is " + max);
   
+  //range array with indices min and max
   var range = [min, max];
+  
+  //Generate an array that contains all numbers between min and max
   
   return range;
 }//end smallestCommons
