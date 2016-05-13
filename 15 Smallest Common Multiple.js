@@ -25,15 +25,19 @@ function smallestCommons(arr) {
     max = arr[1];
   }//end if else
   
-  //test line to see if the first part worked
+  //test console.log to identify min and max
   console.log("Minimum is " + min + " and Maximum is " + max);
   
   //range array with indices min and max
   var range = [min, max];
   
   //Generate an array that contains all numbers between min and max
-  
-  return range;
+   for(var i = min; i <= max; i++) {
+    nums.push(i);
+  }
+  //Test console.log to see nums array
+  console.log(nums);
+  return nums;
 }//end smallestCommons
 
 
