@@ -10,39 +10,20 @@ Here are some helpful links:
     Array.push()
 ****************************************************************/
 
-function sumPrimes(num) {
-  
-  //Array to hold all numbers
-  var holderArray = [];
-  var finalNum = 0;
-  //Iterate through all numbers up to and including num and push them into the holderArray variable
-  for(var i = 0; i <= num; i++) {
-    holderArray.push(i);
+function isPrime(num) {  
+  if (num < 2) return false;
+  for (var i = 2; i < num; i++) {
+    if (num%i===0) return false;
   }
-  
-  //Attempt Sieve of Erathosthenes Algorithm
- 
-  //First number in holderArray is 2
-    //Cross out every 2nd number in the list after it by counting in increments of 2
-      //(These will be all the multiples of 2 in the list)
-  for(var j = 2; j < holderArray.length; j++) {
-    if(holderArray[j] % 2 === 0) {
-        holderArray.splice(j, 1);      
-    }
-  }
-  
-  //Next number in holderArray after 2 is 3
-    //Cross out every 3rd number in the list after it by counting in increments of 3
-    //(These will be all the multiples of 3 in the list)
-  
-  //Next number in holderArray not yet crossed out after 3 is 5
-    //Cross out every 5th number in the list after it by counting in increments of 5
-    //(These will be all the multiples of 5 in the list)
-  
-  
-  console.log(holderArray);
-  return holderArray;
+  return true;
 }
+function sumPrimes(num) {  
+  var finalNum = 0;
+  for (var i = 0; i < num; i++) {
+    if (isPrime(i)) finalNum += i;
+  }
+  if (isPrime(num)) finalNum += num;
+  return finalNum;
 }
 
-sumPrimes(10);
+sumPrimes(10);  
