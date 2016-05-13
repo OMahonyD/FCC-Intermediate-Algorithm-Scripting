@@ -31,6 +31,9 @@ function smallestCommons(arr) {
   //range array with indices min and max
   var range = [min, max];
   
+  //empty array to hold all numbers between min and max
+  var nums = [];
+  
   //Generate an array that contains all numbers between min and max
    for(var i = min; i <= max; i++) {
     nums.push(i);
