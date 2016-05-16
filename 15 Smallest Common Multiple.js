@@ -40,6 +40,10 @@ function smallestCommons(arr) {
   }
   //Test console.log to see nums array
   console.log(nums);
+  
+    //Need to find the smallest common multiple of each of the range of numbers
+  
+  
   return nums;
 }//end smallestCommons
 
