@@ -42,7 +42,7 @@ function smallestCommons(arr) {
   console.log(nums);
   
     //Need to find the smallest common multiple of each of the range of numbers
-  
+    //The smallest number into which each number will divide evenly (i.e. no remainder)  
   
   return nums;
 }//end smallestCommons
