@@ -8,43 +8,29 @@ Here are some helpful links:
     Smallest Common Multiple
 *******************************************/
 
-
 function smallestCommons(arr) {
-  
-  var min, max;
-  //Get the minimum and maximum
-  //if the first index is greater than the second index
-  if(arr[0] > arr[1]) {
-    //the second index is the minimum
-    min = arr[1];
-    max = arr[0];
-  //otherwise if the the second index is greater than the first
-  }else {
-    //the first index is the minimum
-    min = arr[0];
-    max = arr[1];
-  }//end if else
+  //Sort the array min & max.
+  var range = arr.sort();
+  var min = range[0], max = range[1];
   
   //test console.log to identify min and max
   console.log("Minimum is " + min + " and Maximum is " + max);
   
-  //range array with indices min and max
-  var range = [min, max];
-  
   //empty array to hold all numbers between min and max
   var nums = [];
-  
   //Generate an array that contains all numbers between min and max
    for(var i = min; i <= max; i++) {
     nums.push(i);
   }
   //Test console.log to see nums array
   console.log(nums);
+
   
-    //Need to find the smallest common multiple of each of the range of numbers
-    //The smallest number into which each number will divide evenly (i.e. no remainder)  
-  
-  return nums;
+  //Need to find the smallest common multiple of each of the range of numbers
+    //The smallest number into which each number will divide evenly (i.e. no remainder)
+
+     
+  return range;
 }//end smallestCommons
 
 
